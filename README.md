@@ -20,11 +20,6 @@
 https://github.com/Kolya1205/python/blob/main/scraper
 
 Установите необходимые библиотеки:
-
-bash
 pip install beautifulsoup4 requests
- Использование
 Просто запустите:
-
-bash
 python main.py
