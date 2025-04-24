@@ -16,9 +16,8 @@
 ## ⚙️ Установка
 
 1. Скачайте файлы проекта:
+(https://github.com/Kolya1205/python/blob/main/main)
 
-git clone https://github.com/ваш-логин/iso4217-scraper.git
-cd iso4217-scraper
 Установите необходимые библиотеки:
 
 bash
