@@ -17,12 +17,13 @@
 
 1. Скачайте файлы проекта:
 (https://github.com/Kolya1205/python/blob/main/main)
+https://github.com/Kolya1205/python/blob/main/scraper
 
 Установите необходимые библиотеки:
 
 bash
 pip install beautifulsoup4 requests
-🚀 Использование
+ Использование
 Просто запустите:
 
 bash
