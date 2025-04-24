@@ -1,0 +1,31 @@
+import requests
+from bs4 import BeautifulSoup
+import csv
+
+def get_page():
+    url = "https://en.wikipedia.org/wiki/ISO_4217"
+    page = requests.get(url)
+    return page.text
+
+def get_currencies(html):
+    soup = BeautifulSoup(html, 'html.parser')
+    
+    table = soup.find('table')
+    
+    result = []
+    for row in table.find_all('tr')[1:]:
+        columns = row.find_all('td')
+        
+        code = columns[0].text.strip()
+        num = columns[1].text.strip()
+        name = columns[2].text.strip()
+        
+        result.append([code, num, name])
+    
+    return result
+
+def save_csv(data):
+    with open('currencies.csv', 'w', newline='', encoding='utf-8') as file:
+        writer = csv.writer(file)
+        writer.writerow(['Код', 'Цифр.код', 'Валюта'])
+        writer.writerows(data)
