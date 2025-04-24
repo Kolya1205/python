@@ -1,0 +1,14 @@
+from scraper import get_page, get_currencies, save_csv
+
+print("Начинаем сбор данных о валютах...")
+
+# 1. Получаем страницу
+page = get_page()
+
+# 2. Извлекаем данные
+currencies = get_currencies(page)
+
+# 3. Сохраняем в файл
+save_csv(currencies)
+
+print(f"Готово! Сохранено {len(currencies)} валют в файл currencies.csv")
